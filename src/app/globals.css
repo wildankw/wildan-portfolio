@@ -275,35 +275,19 @@ h1 {
 }
 
 .portrait {
-  background:
-    radial-gradient(circle at 50% 36%, #ffffff 0 27%, transparent 28%),
-    linear-gradient(145deg, #e53935 0 50%, #111827 50% 100%);
-  color: var(--ink);
-  flex-direction: column;
   aspect-ratio: 1;
+  background: #111827;
   border-radius: 8px;
-  font-size: clamp(54px, 8vw, 86px);
+  overflow: hidden;
   width: 100%;
 }
 
-.portrait span {
-  align-items: center;
-  background: #ffffff;
-  border: 5px solid #111827;
-  border-radius: 999px;
-  display: inline-flex;
-  height: clamp(120px, 15vw, 170px);
-  justify-content: center;
-  width: clamp(120px, 15vw, 170px);
-}
-
-.portrait small {
-  background: var(--sun);
-  border-radius: 999px;
-  color: #111827;
-  font-size: 15px;
-  margin-top: -20px;
-  padding: 8px 14px;
+.portrait img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .hero-panel p {

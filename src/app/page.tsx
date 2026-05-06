@@ -66,7 +66,7 @@ const content = {
       ["API & Performance", "JMeter, K6, Gatling"],
       ["Programming", "Python, PHP"],
       ["Monitoring", "Kubernetes pods monitoring, Kubernetes logs monitoring"],
-      ["Kolaborasi", "Jira, Agile/Scrum, Codex, Critical Thinking, Problem Solving, Teamwork"],
+      ["Kolaborasi", "Jira, Agile/Scrum, Critical Thinking, Problem Solving, Teamwork"],
     ],
     education:
       "D4 Information Technology / Informatics Engineering, Politeknik Pos Indonesia, Sep 2016 - Sep 2020",
@@ -155,7 +155,7 @@ const contact = {
   name: "Wildan Khaustara W",
   phone: "083116993234",
   email: "wkhaustara@gmail.com",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/wildankhaustarawijaksana/",
   drive: "https://drive.google.com/drive/folders/1WOIIVjauFa1ssXkAn4BEKyfIqztEsWv-",
   cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Software_QA_Engineer.pdf`,
   cvEn: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Software_QA_Engineer_EN.pdf`,
@@ -259,8 +259,7 @@ export default function Home() {
 
         <aside className="hero-panel" aria-label="Profile highlight">
           <div className="portrait">
-            <span>{initials}</span>
-            <small>QA</small>
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/wildan-profile.jpg`} alt={contact.name} />
           </div>
           <p>{copy.availability}</p>
           <a href={`tel:${contact.phone}`}>{contact.phone}</a>
@@ -365,6 +364,9 @@ export default function Home() {
         </div>
         <div className="contact-actions">
           <a href={`mailto:${contact.email}`}>{copy.email}</a>
+          <a href={contact.linkedin} target="_blank" rel="noreferrer">
+            {copy.linkedin}
+          </a>
           <a href={contact.drive} target="_blank" rel="noreferrer">
             {copy.portfolio}
           </a>
