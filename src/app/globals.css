@@ -133,7 +133,16 @@ main {
 .brand span {
   border-radius: 8px;
   height: 38px;
+  overflow: hidden;
   width: 38px;
+}
+
+.brand img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .brand strong {

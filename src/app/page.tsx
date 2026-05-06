@@ -220,7 +220,9 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#top" aria-label={contact.name}>
-          <span>{initials}</span>
+          <span>
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/wildan-profile.jpg`} alt="" />
+          </span>
           <strong>{contact.name}</strong>
         </a>
         <nav aria-label="Primary navigation">
