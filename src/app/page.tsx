@@ -61,12 +61,12 @@ const content = {
       ["IKD", "Identitas Kependudukan Digital", "Pengujian fitur identitas digital dan validasi terkait."],
     ],
     skills: [
-      ["Testing & QA", "Software Quality Assurance, Test Case Design, Functional Testing, Negative Case Testing, Automation Testing"],
-      ["Automation", "Pytest, Selenium, Python Selenium, Typewrite, Selenium SIDE"],
-      ["API & Performance", "JMeter, K6, Gatling"],
-      ["Programming", "Python, PHP"],
-      ["Monitoring", "Kubernetes pods monitoring, Kubernetes logs monitoring"],
-      ["Kolaborasi", "Jira, Agile/Scrum, Critical Thinking, Problem Solving, Teamwork"],
+      ["Testing & QA", "Software Quality Assurance, Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing, Integration Testing, End-to-End Testing, Exploratory Testing, Negative Testing, UAT, Test Cases, Test Scenario, Defect Reporting"],
+      ["Automation", "Pytest, Selenium, Selenium WebDriver, Python Selenium, Page Object Model, Test Automation Framework, Selenium SIDE"],
+      ["API & Performance", "Postman, REST API Testing, Swagger / OpenAPI, JMeter, Locust, K6, Gatling, Performance Testing, Load Testing, Stress Testing"],
+      ["Programming & Database", "Python, PHP, SQL, MySQL, PostgreSQL"],
+      ["Monitoring & DevOps", "Kubernetes pods monitoring, Kubernetes logs monitoring, Docker basic, Linux basic, GitHub Actions"],
+      ["Kolaborasi", "Jira, Confluence, Git, GitHub, Browser DevTools, Codex, Agile/Scrum, Critical Thinking, Problem Solving, Teamwork"],
     ],
     education:
       "D4 Information Technology / Informatics Engineering, Politeknik Pos Indonesia, Sep 2016 - Sep 2020",
@@ -133,12 +133,12 @@ const content = {
       ["IKD", "Digital Population Identity", "Supported digital identity testing and related feature validation."],
     ],
     skills: [
-      ["Testing & QA", "Software Quality Assurance, Test Case Design, Functional Testing, Negative Case Testing, Automation Testing"],
-      ["Automation", "Pytest, Selenium, Python Selenium, Typewrite, Selenium SIDE"],
-      ["API & Performance", "JMeter, K6, Gatling"],
-      ["Programming", "Python, PHP"],
-      ["Monitoring", "Kubernetes pods monitoring, Kubernetes logs monitoring"],
-      ["Collaboration", "Jira, Agile/Scrum, Critical Thinking, Problem Solving, Teamwork"],
+      ["Testing & QA", "Software Quality Assurance, Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing, Integration Testing, End-to-End Testing, Exploratory Testing, Negative Testing, UAT, Test Cases, Test Scenario, Defect Reporting"],
+      ["Automation", "Pytest, Selenium, Selenium WebDriver, Python Selenium, Page Object Model, Test Automation Framework, Selenium SIDE"],
+      ["API & Performance", "Postman, REST API Testing, Swagger / OpenAPI, JMeter, Locust, K6, Gatling, Performance Testing, Load Testing, Stress Testing"],
+      ["Programming & Database", "Python, PHP, SQL, MySQL, PostgreSQL"],
+      ["Monitoring & DevOps", "Kubernetes pods monitoring, Kubernetes logs monitoring, Docker basic, Linux basic, GitHub Actions"],
+      ["Collaboration", "Jira, Confluence, Git, GitHub, Browser DevTools, Codex, Agile/Scrum, Critical Thinking, Problem Solving, Teamwork"],
     ],
     education:
       "D4 Information Technology / Informatics Engineering, Politeknik Pos Indonesia, Sep 2016 - Sep 2020",
@@ -267,7 +267,22 @@ export default function Home() {
           <a href={`tel:${contact.phone}`}>{contact.phone}</a>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <div className="tool-cloud" aria-label="Core tools">
-            {["Pytest", "Selenium", "JMeter", "K6", "Gatling", "Kubernetes", "Jira"].map((tool) => (
+            {[
+              "Pytest",
+              "Selenium",
+              "Postman",
+              "JMeter",
+              "Locust",
+              "K6",
+              "Gatling",
+              "Kubernetes",
+              "Jira",
+              "Codex",
+              "UAT",
+              "Test Cases",
+              "SQL",
+              "GitHub Actions",
+            ].map((tool) => (
               <span key={tool}>{tool}</span>
             ))}
           </div>
