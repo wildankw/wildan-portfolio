@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
-const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig = {
-  basePath: isGitHubPages ? "/wildan-portfolio" : "",
-  assetPrefix: isGitHubPages ? "/wildan-portfolio/" : "",
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
   output: "export",
   images: {
     unoptimized: true
