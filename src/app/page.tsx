@@ -157,8 +157,8 @@ const contact = {
   email: "wkhaustara@gmail.com",
   linkedin: "https://www.linkedin.com/in/wildankhaustarawijaksana/",
   drive: "https://drive.google.com/drive/folders/1WOIIVjauFa1ssXkAn4BEKyfIqztEsWv-",
-  cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Software_QA_Engineer.pdf`,
-  cvEn: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Software_QA_Engineer_EN.pdf`,
+  cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/CV_Software_QA_Engineer.pdf`,
+  cvEn: `${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/CV_Software_QA_Engineer_EN.pdf`,
   cvQa: "/CV-Software-QA-Engineer.pdf",
 };
 
@@ -221,7 +221,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label={contact.name}>
           <span>
-            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/wildan-profile.jpg`} alt="" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/wildan-profile.jpg`} alt="" />
           </span>
           <strong>{contact.name}</strong>
         </a>
@@ -261,7 +261,7 @@ export default function Home() {
 
         <aside className="hero-panel" aria-label="Profile highlight">
           <div className="portrait">
-            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/wildan-profile.jpg`} alt={contact.name} />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/wildan-profile.jpg`} alt={contact.name} />
           </div>
           <p>{copy.availability}</p>
           <a href={`tel:${contact.phone}`}>{contact.phone}</a>
