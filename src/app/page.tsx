@@ -138,7 +138,7 @@ const content = {
       ["API & Performance", "JMeter, K6, Gatling"],
       ["Programming", "Python, PHP"],
       ["Monitoring", "Kubernetes pods monitoring, Kubernetes logs monitoring"],
-      ["Collaboration", "Jira, Agile/Scrum, Codex, Critical Thinking, Problem Solving, Teamwork"],
+      ["Collaboration", "Jira, Agile/Scrum, Critical Thinking, Problem Solving, Teamwork"],
     ],
     education:
       "D4 Information Technology / Informatics Engineering, Politeknik Pos Indonesia, Sep 2016 - Sep 2020",
