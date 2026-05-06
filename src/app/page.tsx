@@ -258,7 +258,10 @@ export default function Home() {
         </div>
 
         <aside className="hero-panel" aria-label="Profile highlight">
-          <div className="portrait">{initials}</div>
+          <div className="portrait">
+            <span>{initials}</span>
+            <small>QA</small>
+          </div>
           <p>{copy.availability}</p>
           <a href={`tel:${contact.phone}`}>{contact.phone}</a>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
