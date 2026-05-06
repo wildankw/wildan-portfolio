@@ -157,8 +157,8 @@ const contact = {
   email: "wkhaustara@gmail.com",
   linkedin: "https://www.linkedin.com/",
   drive: "https://drive.google.com/drive/folders/1WOIIVjauFa1ssXkAn4BEKyfIqztEsWv-",
-  cv: "/Wildan-Khaustara-W-Resume-2026.pdf",
-  cvEn: "/Wildan-Khaustara-W-CV-EN.pdf",
+  cv: "/CV_Software_QA_Engineer.pdf",
+  cvEn: "/CV_Software_QA_Engineer_EN.pdf",
   cvQa: "/CV-Software-QA-Engineer.pdf",
 };
 
