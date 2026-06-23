@@ -133,7 +133,7 @@ const content = {
       },
     ],
     projects: [
-      ["SDP", "Correctional Database System", "Automation and functional testing for core system modules."],
+      ["SDP", "Sistem Database Pemasyarakatan", "Automation and functional testing for core system modules."],
       ["SIPPT - BSKJI", "Integrated Public Service Information System", "End-to-end testing to ensure service flows met requirements."],
       ["MBG Dashboard", "Operational dashboard", "Feature, data flow, and system output validation."],
       ["MBG AI Chatbot", "AI Chatbot & Text-to-SQL", "Testing chatbot responses and generated query outputs."],
