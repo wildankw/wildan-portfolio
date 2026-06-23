@@ -76,6 +76,7 @@ const content = {
     email: "Kirim Email",
     linkedin: "LinkedIn",
     portfolio: "Folder Portfolio",
+    certificateCta: "Unduh Sertifikat",
   },
   en: {
     nav: ["Profile", "Experience", "Projects", "Skills", "Contact"],
@@ -148,6 +149,7 @@ const content = {
     email: "Send Email",
     linkedin: "LinkedIn",
     portfolio: "Portfolio Folder",
+    certificateCta: "Download Certificate",
   },
 } as const;
 
@@ -160,6 +162,7 @@ const contact = {
   cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/CV_Software_QA_Engineer.pdf`,
   cvEn: `${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/CV_Software_QA_Engineer_EN.pdf`,
   cvQa: "/CV-Software-QA-Engineer.pdf",
+  certificate: `${process.env.NEXT_PUBLIC_BASE_PATH ?? "."}/sertifikat_System_Analyst_Wildan_KW.pdf`,
 };
 
 export default function Home() {
@@ -365,6 +368,9 @@ export default function Home() {
           <article>
             <h3>Certification</h3>
             <p>{copy.certification}</p>
+            <a className="text-link" href={contact.certificate} target="_blank" rel="noreferrer">
+              {copy.certificateCta}
+            </a>
           </article>
           <article>
             <h3>Language</h3>
@@ -389,6 +395,9 @@ export default function Home() {
           </a>
           <a href={lang === "id" ? contact.cv : contact.cvEn} target="_blank" rel="noreferrer">
             {copy.secondaryCta}
+          </a>
+          <a href={contact.certificate} target="_blank" rel="noreferrer">
+            {copy.certificateCta}
           </a>
         </div>
       </section>

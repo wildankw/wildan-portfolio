@@ -421,6 +421,17 @@ h1 {
   margin-bottom: 0;
 }
 
+.text-link {
+  color: var(--accent-strong);
+  display: inline-flex;
+  font-weight: 800;
+  margin-top: 14px;
+}
+
+.text-link:hover {
+  color: var(--accent);
+}
+
 ul {
   color: var(--muted);
   grid-column: 1 / -1;
