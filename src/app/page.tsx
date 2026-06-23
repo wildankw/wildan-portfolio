@@ -59,6 +59,11 @@ const content = {
       ["SIPSN", "Sistem Informasi Pengelolaan Sampah Nasional", "Mendukung pengujian sistem dan validasi alur fungsional."],
       ["IKN Registration", "Sistem registrasi", "Testing alur pengguna pada sistem registrasi."],
       ["IKD", "Identitas Kependudukan Digital", "Pengujian fitur identitas digital dan validasi terkait."],
+      [
+        "PRODUCT",
+        "Sistem Perencanaan Daerah Berbasis AI",
+        "System analysis untuk requirement gathering, pemetaan proses bisnis, use case, role pengguna, dokumentasi fungsional, database design, dan validasi berbantuan AI atas dokumen perencanaan daerah.",
+      ],
     ],
     skills: [
       ["Testing & QA", "Software Quality Assurance, Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing, Integration Testing, End-to-End Testing, Exploratory Testing, Negative Testing, UAT, Test Cases, Test Scenario, Defect Reporting"],
@@ -132,6 +137,11 @@ const content = {
       ["SIPSN", "National Waste Management Information System", "Supported system testing and functional flow validation."],
       ["IKN Registration", "Registration system", "Tested user flows across the registration system."],
       ["IKD", "Digital Population Identity", "Supported digital identity testing and related feature validation."],
+      [
+        "PRODUCT",
+        "AI-based regional planning system",
+        "System analysis for requirement gathering, business process mapping, use case design, user roles, functional documentation, database design, and AI-assisted validation of regional planning documents.",
+      ],
     ],
     skills: [
       ["Testing & QA", "Software Quality Assurance, Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing, Integration Testing, End-to-End Testing, Exploratory Testing, Negative Testing, UAT, Test Cases, Test Scenario, Defect Reporting"],
