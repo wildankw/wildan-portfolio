@@ -3,6 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 
 type Lang = "id" | "en";
+type ToolVisual = {
+  src?: string;
+};
 
 const content = {
   id: {
@@ -163,6 +166,53 @@ const content = {
   },
 } as const;
 
+const simpleIcon = (slug: string, color?: string) =>
+  `https://cdn.simpleicons.org/${slug}${color ? `/${color}` : ""}`;
+
+const toolVisuals: Record<string, ToolVisual> = {
+  Pytest: { src: simpleIcon("pytest", "0A9EDC") },
+  Selenium: { src: simpleIcon("selenium", "43B02A") },
+  Postman: { src: simpleIcon("postman", "FF6C37") },
+  JMeter: { src: simpleIcon("apachejmeter", "D22128") },
+  K6: { src: simpleIcon("k6", "7D64FF") },
+  Gatling: { src: simpleIcon("gatling", "FF9E2A") },
+  Kubernetes: { src: simpleIcon("kubernetes", "326CE5") },
+  Jira: { src: simpleIcon("jira", "0052CC") },
+  "GitHub Actions": { src: simpleIcon("githubactions", "2088FF") },
+  Python: { src: simpleIcon("python", "3776AB") },
+  Playwright: { src: simpleIcon("playwright", "2EAD33") },
+  Swagger: { src: simpleIcon("swagger", "85EA2D") },
+  Locust: { src: simpleIcon("locust", "2F8C37") },
+  Docker: { src: simpleIcon("docker", "2496ED") },
+  Linux: { src: simpleIcon("linux", "FCC624") },
+  Git: { src: simpleIcon("git", "F05032") },
+  GitHub: { src: simpleIcon("github", "181717") },
+  MySQL: { src: simpleIcon("mysql", "4479A1") },
+  PostgreSQL: { src: simpleIcon("postgresql", "4169E1") },
+  Confluence: { src: simpleIcon("confluence", "172B4D") },
+  Figma: { src: simpleIcon("figma", "F24E1E") },
+};
+
+const skillVisuals: Record<string, string[]> = {
+  "Testing & QA": ["UAT", "Test Cases", "Bug", "Regression"],
+  Automation: ["Pytest", "Selenium", "Playwright", "Python"],
+  "API & Performance": ["Postman", "Swagger", "JMeter", "Locust", "K6", "Gatling"],
+  "Programming & Database": ["Python", "SQL", "MySQL", "PostgreSQL"],
+  "Monitoring & DevOps": ["Kubernetes", "Docker", "Linux", "GitHub Actions"],
+  Kolaborasi: ["Jira", "Confluence", "Git", "GitHub", "Codex"],
+  Collaboration: ["Jira", "Confluence", "Git", "GitHub", "Codex"],
+};
+
+function getToolInitials(name: string) {
+  return name
+    .split(/[\s/&-]+/)
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 3)
+    .toUpperCase();
+}
+
 const contact = {
   name: "Wildan Khaustara W",
   phone: "083116993234",
@@ -296,7 +346,23 @@ export default function Home() {
               "SQL",
               "GitHub Actions",
             ].map((tool) => (
-              <span key={tool}>{tool}</span>
+              <span className="tool-chip" key={tool}>
+                {toolVisuals[tool]?.src ? (
+                  <img
+                    src={toolVisuals[tool].src}
+                    alt=""
+                    aria-hidden="true"
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <span className="tool-initials" aria-hidden="true">
+                    {getToolInitials(tool)}
+                  </span>
+                )}
+                <span>{tool}</span>
+              </span>
             ))}
           </div>
         </aside>
@@ -358,6 +424,23 @@ export default function Home() {
         <div className="skill-list">
           {copy.skills.map(([group, skills]) => (
             <article key={group}>
+              <div className="skill-icons" aria-label={`${group} tools`}>
+                {(skillVisuals[group] ?? []).map((tool) => (
+                  <span className="skill-icon" key={`${group}-${tool}`} title={tool}>
+                    {toolVisuals[tool]?.src ? (
+                      <img
+                        src={toolVisuals[tool].src}
+                        alt={tool}
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
+                      />
+                    ) : (
+                      <span aria-hidden="true">{getToolInitials(tool)}</span>
+                    )}
+                  </span>
+                ))}
+              </div>
               <h3>{group}</h3>
               <p>{skills}</p>
             </article>
